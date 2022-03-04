@@ -1,8 +1,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_app/CvPage1.dart';
-import 'package:flutter_app/CvPage2.dart';
+import 'package:flutter_app/cvPage2.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter_app/cvPage3.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Templates_Pages extends StatefulWidget {
   const Templates_Pages({Key key}) : super(key: key);
@@ -19,37 +21,42 @@ class _Templates_PagesState extends State<Templates_Pages> {
         elevation: 0,
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(height: 130,),
           Padding(
-            padding: const EdgeInsets.only(left: 40,right: 40,top: 70),
+            padding: const EdgeInsets.only(top: 70),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 GestureDetector(
                   onTap: (){
                     Navigator.push(context,
-                        MaterialPageRoute(builder:(context) => cv_page1(),)
+                        MaterialPageRoute(builder:(context) => Cv_Page5(
+                          $width1: MediaQuery.of(context).size.width*0.4,
+                          $height1: MediaQuery.of(context).size.height,
+                        )
+                        )
                     );
                   },
                   child: Container(
-                    width: 150,
-                    height: 180,
+                    width: MediaQuery.of(context).size.width/3,
+                    height: MediaQuery.of(context).size.height/5,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      border: Border.all(width: 2),
-                      image: DecorationImage(
-                        image: AssetImage("assets/images/cv2.jpg"),
-                        fit: BoxFit.cover
-                      )
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(width: 2),
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/cv1.jpg"),
+                            fit: BoxFit.cover
+                        )
                     ),
                   ),
                 ),
 
-                SizedBox(width: 30,),
+                SizedBox(width: 35,),
 
                 Container(
-                  width: 150,
-                  height: 180,
+                  width: MediaQuery.of(context).size.width/3,
+                  height: MediaQuery.of(context).size.height/5,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       border: Border.all(width: 2),
@@ -63,18 +70,21 @@ class _Templates_PagesState extends State<Templates_Pages> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 40,right: 40,top: 30),
+            padding: const EdgeInsets.only(top: 30),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 GestureDetector(
                   onTap: (){
                     Navigator.push(context,
-                        MaterialPageRoute(builder:(context) => cvPage2(),)
+                        MaterialPageRoute(builder:(context) => Cv_Page2(
+                        )
+                        )
                     );
                   },
                   child: Container(
-                    width: 150,
-                    height: 180,
+                    width: MediaQuery.of(context).size.width/3,
+                    height: MediaQuery.of(context).size.height/5,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         border: Border.all(width: 2),
@@ -88,16 +98,25 @@ class _Templates_PagesState extends State<Templates_Pages> {
 
                 SizedBox(width: 30,),
 
-                Container(
-                  width: 150,
-                  height: 180,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      border: Border.all(width: 2),
-                      image: DecorationImage(
-                          image: AssetImage("assets/images/cv2.jpg"),
-                          fit: BoxFit.cover
-                      )
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context,
+                        MaterialPageRoute(builder:(context) => Cv_Page3(
+                        )
+                        )
+                    );
+                  },
+                  child: Container(
+                    width: MediaQuery.of(context).size.width/3,
+                    height: MediaQuery.of(context).size.height/5,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(width: 2),
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/cv2.jpg"),
+                            fit: BoxFit.cover
+                        )
+                    ),
                   ),
                 ),
               ],

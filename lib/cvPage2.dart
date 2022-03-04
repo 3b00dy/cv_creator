@@ -4,36 +4,36 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
-class cvPage2 extends StatefulWidget {
-  const cvPage2({Key key}) : super(key: key);
 
-  @override
-  _cvPage2State createState() => _cvPage2State();
-}
+class Cv_Page2 extends StatelessWidget {
+  const Cv_Page2({Key key}) : super(key: key);
 
-class _cvPage2State extends State<cvPage2> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(),
 
       body: SingleChildScrollView(
         child: Row(
           children: [
+
+
+            // Black Container
+
             Row(
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.width*0.4,
+                  width: MediaQuery.of(context).size.width/2.5,
                   height: MediaQuery.of(context).size.height,
                   color: Colors.black,
                   child: Column(
                     children: [
                       Container(
                         margin: EdgeInsets.only(top: 30,right: 10,bottom: 30),
-                        width: 100,
-                        height: 100,
+                        width: MediaQuery.of(context).size.width/4,
+                        height: MediaQuery.of(context).size.height/8,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(50),
+                            borderRadius: BorderRadius.circular(100),
                             image: DecorationImage(
                                 image: AssetImage("assets/images/person.jpg"),
                                 fit: BoxFit.cover
@@ -43,21 +43,21 @@ class _cvPage2State extends State<cvPage2> {
                       Text("Haider Muhammad",
                           style: GoogleFonts.roboto(
                               fontWeight: FontWeight.bold,
-                              fontSize: 18,
+                              fontSize: 15,
                               color: Colors.white
                           )
                       ),
                       Text("Programmer",
                           style: GoogleFonts.roboto(
                               fontWeight: FontWeight.bold,
-                              fontSize: 15,
+                              fontSize: 13,
                               color: Colors.white
                           )
                       ),
                       Container(
                         margin: EdgeInsets.only(top: 30,bottom: 20),
-                        height: 30,
-                        width: 180,
+                        width: MediaQuery.of(context).size.width/2.5,
+                        height: MediaQuery.of(context).size.height/25,
                         decoration: BoxDecoration(
                             color: Colors.blueAccent,
                             borderRadius: BorderRadius.only(
@@ -129,8 +129,8 @@ class _cvPage2State extends State<cvPage2> {
                       ),
                       Container(
                         margin: EdgeInsets.only(top: 30,bottom: 20),
-                        height: 30,
-                        width: 180,
+                        width: MediaQuery.of(context).size.width/2.5,
+                        height: MediaQuery.of(context).size.height/25,
                         decoration: BoxDecoration(
                             color: Colors.blueAccent,
                             borderRadius: BorderRadius.only(
@@ -216,8 +216,8 @@ class _cvPage2State extends State<cvPage2> {
                       ),
                       Container(
                         margin: EdgeInsets.only(top: 30,bottom: 30),
-                        height: 30,
-                        width: 180,
+                        width: MediaQuery.of(context).size.width/2.5,
+                        height: MediaQuery.of(context).size.height/25,
                         decoration: BoxDecoration(
                             color: Colors.blueAccent,
                             borderRadius: BorderRadius.only(
@@ -286,15 +286,19 @@ class _cvPage2State extends State<cvPage2> {
                 ),
               ],
             ),
+
+
+            // White Container
+
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Container(
-                  width: 230,
-                  height: 700,
+                  width: MediaQuery.of(context).size.width/1.7,
+                  height: MediaQuery.of(context).size.height,
                   color: Colors.white,
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 15,right: 10),
+                    padding: const EdgeInsets.only(left: 15,right: 10,top: 30),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -451,6 +455,9 @@ class _cvPage2State extends State<cvPage2> {
     );
   }
 }
+
+
+
 
 
 

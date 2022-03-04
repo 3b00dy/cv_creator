@@ -1,18 +1,13 @@
 
-
 import 'dart:io';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/cvPage1.dart';
-import 'package:flutter_app/CvPage2.dart';
 import 'package:flutter_app/templates_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:lottie/lottie.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
-import 'package:weekday_selector/weekday_selector.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:share/share.dart';
 
 class secondpage extends StatefulWidget {
   const secondpage({Key key}) : super(key: key);
@@ -22,10 +17,22 @@ class secondpage extends StatefulWidget {
 }
 
 class _secondpageState extends State<secondpage> {
-  int selected = 0;
-  bool _securePassword = true;
+  File imageFile;
+  File _image;
+  Future Selectimage() async {
+    var image = await ImagePicker().pickImage(source: ImageSource.camera);
+    setState(() {
+      imageFile = _image;
+    });
 
+  }
+
+
+
+
+  int selected = 0;
   Widget customRadio(String text, int index) {
+
     return MaterialButton(
       onPressed: () {
         setState(() {
@@ -46,42 +53,50 @@ class _secondpageState extends State<secondpage> {
     );
   }
 
-  File image;
-  final imagepicker = ImagePicker();
-
-  uploadImage() async {
-    var  pickedimage = await imagepicker.pickImage(source: ImageSource.gallery);
-
-  }
   @override
-  Future pickImage() async {
-    await ImagePicker().pickImage(source: ImageSource.gallery);
-  }
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        actions: [
+          Padding(padding: EdgeInsets.only(right: 15),
+          child: IconButton(
+            icon: Icon(Iconsax.share5,size: 30, color: Colors.white,),
+            onPressed: () {
+              Share.share("https://play.google.com/store/apps/details?id=com.instructivetech.testapp");
+            },
+          ),
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
 
             Center(
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder:(context) => secondpage())
-                  );
-                },
-                child: Container(
-                  width: 100,
-                  height: 100,
-                  margin: EdgeInsets.only(top: 30),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    color: Colors.black,
-                  ),
-                  child: Icon(Iconsax.camera,color: Colors.white,size: 38,),
+              child: imageFile != null
+                  ? ClipOval(
+                    child: Image.file
+                (
+                imageFile,
+                      width: MediaQuery.of(context).size.width/3.5,
+                      height: MediaQuery.of(context).size.height/7,
+                fit: BoxFit.cover,
+              ),
+                  )
+                  :
+              Container(
+                margin: EdgeInsets.only(top: 30),
+                width: MediaQuery.of(context).size.width/3.5,
+                height: MediaQuery.of(context).size.height/7,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(100),
+                  color: Colors.black
                 ),
+                child: IconButton(
+                  icon: Icon(Iconsax.camera,size: 38,color: Colors.white,),
+                  onPressed: ()=> Selectimage(),
+                )
               )
             ),
 
@@ -315,4 +330,5 @@ class _secondpageState extends State<secondpage> {
       ),
     );
   }
+
 }

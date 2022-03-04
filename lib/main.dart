@@ -2,7 +2,7 @@
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/Login_Page.dart';
+import 'package:flutter_app/first_Page.dart';
 import 'package:flutter_app/Info_Page.dart';
 import 'package:flutter_app/db.hlper.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -72,43 +72,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
       body: SingleChildScrollView(
 
-        child: Padding(
-          padding: const EdgeInsets.only(left: 20,right: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-
-              login_page(),
-
-              SizedBox(height: 70,),
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  MaterialButton(
-                    onPressed: (){
-                      Navigator.push(context,
-                          MaterialPageRoute(builder:(context) => secondpage(),)
-                      );
-                    },
-                    color: Colors.black,
-                    height: 50,
-                    padding: EdgeInsets.only(left: 120,right: 120),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18),
-                    ),
-                    child: Text("Sign up",
-                        style: GoogleFonts.roboto(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.white,
-                        )
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            First_Page(),
+          ],
         ),
       )
     );
