@@ -1,10 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/CvPage1.dart';
+import 'package:flutter_app/cvPage1.dart';
 import 'package:flutter_app/cvPage2.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter_app/cvPage3.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Templates_Pages extends StatefulWidget {
   const Templates_Pages({Key key}) : super(key: key);
@@ -31,9 +29,7 @@ class _Templates_PagesState extends State<Templates_Pages> {
                 GestureDetector(
                   onTap: (){
                     Navigator.push(context,
-                        MaterialPageRoute(builder:(context) => Cv_Page5(
-                          $width1: MediaQuery.of(context).size.width*0.4,
-                          $height1: MediaQuery.of(context).size.height,
+                        MaterialPageRoute(builder:(context) => page1(
                         )
                         )
                     );
@@ -77,7 +73,7 @@ class _Templates_PagesState extends State<Templates_Pages> {
                 GestureDetector(
                   onTap: (){
                     Navigator.push(context,
-                        MaterialPageRoute(builder:(context) => Cv_Page2(
+                        MaterialPageRoute(builder:(context) => Page2(
                         )
                         )
                     );
@@ -101,7 +97,7 @@ class _Templates_PagesState extends State<Templates_Pages> {
                 GestureDetector(
                   onTap: (){
                     Navigator.push(context,
-                        MaterialPageRoute(builder:(context) => Cv_Page3(
+                        MaterialPageRoute(builder:(context) => Page3(
                         )
                         )
                     );

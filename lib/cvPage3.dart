@@ -2,8 +2,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Cv_Page3 extends StatelessWidget {
-  const Cv_Page3({Key key}) : super(key: key);
+class Page3 extends StatelessWidget {
+  const Page3({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
