@@ -31,7 +31,7 @@ class Page2 extends StatelessWidget {
                       Container(
                         margin: EdgeInsets.only(top: 30,right: 10,bottom: 30),
                         width: MediaQuery.of(context).size.width/4,
-                        height: MediaQuery.of(context).size.height/8,
+                        height: MediaQuery.of(context).size.height/8.3,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(100),
                             image: DecorationImage(

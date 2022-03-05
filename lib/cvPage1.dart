@@ -12,7 +12,9 @@ class page1 extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(),
 
-        body: SingleChildScrollView(
+        body: Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
           child: Padding(
             padding: const EdgeInsets.only(left: 15),
             child: Column(
@@ -20,11 +22,11 @@ class page1 extends StatelessWidget {
                 Row(
                   children: [
                     Container(
-                      width: 90,
-                      height: 90,
+                      width: MediaQuery.of(context).size.width/4,
+                      height: MediaQuery.of(context).size.height/8.3,
                       margin: EdgeInsets.only(top: 30, right: 20),
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(45),
+                          borderRadius: BorderRadius.circular(100),
                           image: DecorationImage(
                               image: AssetImage("assets/images/person.jpg"),
                               fit: BoxFit.fitHeight

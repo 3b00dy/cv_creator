@@ -88,10 +88,10 @@ class _secondpageState extends State<secondpage> {
               Container(
                 margin: EdgeInsets.only(top: 30),
                 width: MediaQuery.of(context).size.width/3.5,
-                height: MediaQuery.of(context).size.height/7,
+                height: MediaQuery.of(context).size.height/7.5,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(100),
-                  color: Colors.black
+                  color: Colors.blueAccent
                 ),
                 child: IconButton(
                   icon: Icon(Iconsax.camera,size: 38,color: Colors.white,),
