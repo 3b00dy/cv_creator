@@ -148,7 +148,7 @@ class _First_PageState extends State<First_Page> {
                 fontWeight: FontWeight.w600
               ),
             ),
-          )
+          ),
         ),
 
     ]

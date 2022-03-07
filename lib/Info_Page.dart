@@ -57,18 +57,8 @@ class _secondpageState extends State<secondpage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          Padding(padding: EdgeInsets.only(right: 15),
-          child: IconButton(
-            icon: Icon(Iconsax.share5,size: 30, color: Colors.white,),
-            onPressed: () {
-              Share.share("https://play.google.com/store/apps/details?id=com.instructivetech.testapp");
-            },
-          ),
-          ),
-        ],
-      ),
+      appBar: AppBar(),
+
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -87,8 +77,8 @@ class _secondpageState extends State<secondpage> {
                   :
               Container(
                 margin: EdgeInsets.only(top: 30),
-                width: MediaQuery.of(context).size.width/3.5,
-                height: MediaQuery.of(context).size.height/7.5,
+                width: MediaQuery.of(context).size.width/4,
+                height: MediaQuery.of(context).size.height/8,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(100),
                   color: Colors.blueAccent
@@ -111,220 +101,243 @@ class _secondpageState extends State<secondpage> {
               ),
             ),
 
+            SizedBox(height: 30,),
+
             Padding(
-                padding: const EdgeInsets.only(left: 20,right: 20),
-              child: Column(
-                children: [
-                  SizedBox(height: 30,),
-                  TextField(
-                    decoration: InputDecoration(
-                        labelText: "Full name",
-                        hintText: "any name",
-                        labelStyle: GoogleFonts.roboto(
-                            color: Colors.black,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600
-                        ),
-                        prefixIcon: Icon(Iconsax.user,color: Colors.black,size: 25,),
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.grey.shade200,width: 2),
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black,width: 1.5),
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                    ),
-                  ),
-
-                  SizedBox(height: 30,),
-
-                  TextField(
-                    decoration: InputDecoration(
-                        labelText: "Email",
-                        hintText: "example@gmail.com",
-                        labelStyle: GoogleFonts.roboto(
-                            color: Colors.black,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600
-                        ),
-                        prefixIcon: Icon(Icons.mail,color: Colors.black,size: 25,),
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.grey.shade200,width: 2),
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black,width: 1.5),
-                            borderRadius: BorderRadius.circular(10)
-                        )
-
-                    ),
-                  ),
-
-                  SizedBox(height: 30,),
-
-                  TextField(
-                    decoration: InputDecoration(
-                        labelText: "Profession",
-                        hintText: "Programmer",
-                        labelStyle: GoogleFonts.roboto(
-                            color: Colors.black,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600
-                        ),
-                        prefixIcon: Icon(Iconsax.message,color: Colors.black,size: 25,),
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.grey.shade200,width: 2),
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black,width: 1.5),
-                            borderRadius: BorderRadius.circular(10)
-                        )
-
-                    ),
-                  ),
-
-                  SizedBox(height: 30,),
-
-                  TextField(
-                    decoration: InputDecoration(
-                        labelText: "Education",
-                        labelStyle: GoogleFonts.roboto(
-                            color: Colors.black,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600
-                        ),
-                        prefixIcon: Icon(Iconsax.user,color: Colors.black,size: 25,),
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.grey.shade200,width: 2),
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black,width: 1.5),
-                            borderRadius: BorderRadius.circular(10)
-                        )
-
-                    ),
-                  ),
-
-                  SizedBox(height: 30,),
-
-                  TextField(
-                    decoration: InputDecoration(
-                        labelText: "Certificates",
-                        labelStyle: GoogleFonts.roboto(
-                            color: Colors.black,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600
-                        ),
-                        prefixIcon: Icon(Iconsax.message,color: Colors.black,size: 25,),
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.grey.shade200,width: 2),
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black,width: 1.5),
-                            borderRadius: BorderRadius.circular(10)
-                        )
-
-                    ),
-                  ),
-
-                  SizedBox(height: 30,),
-
-                  TextField(
-                    decoration: InputDecoration(
-                        labelText: "Skills",
-                        labelStyle: GoogleFonts.roboto(
-                            color: Colors.black,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600
-                        ),
-                        prefixIcon: Icon(Iconsax.message,color: Colors.black,size: 25,),
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.grey.shade200,width: 2),
-                            borderRadius: BorderRadius.circular(10)
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black,width: 1.5),
-                            borderRadius: BorderRadius.circular(10)
-                        )
-
-                    ),
-                  ),
-
-                  Padding(
-                    padding: const EdgeInsets.only(top: 30,bottom: 30),
-                    child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 15,vertical: 5),
+              padding: const EdgeInsets.all(30),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color.fromRGBO(196,135,198,.2),
+                      blurRadius: 10,
+                      offset: Offset(0,.1),
+                    )
+                  ]
+                ),
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color(0xffeeeeee),
-                            blurRadius: 10,
-                            offset: Offset(0,4)
-                          ),
-                        ],
-                        borderRadius: BorderRadius.circular(8),
-                        border: Border.all(color: Colors.black.withOpacity(0.13))
+                        border: Border(bottom: BorderSide(
+                          color: Colors.grey[300]
+                        ))
                       ),
-                      child: Stack(
-                        children: [
-                          InternationalPhoneNumberInput(
-                            onInputChanged: (value) {},
-                            selectorConfig: SelectorConfig(
-                              selectorType: PhoneInputSelectorType.BOTTOM_SHEET
-                            ),
-                            cursorColor: Colors.black,
-                            formatInput: false,
-                            inputBorder: InputBorder.none,
-                            hintText: 'Phone Number',
-                            textStyle: TextStyle(
-                              color: Colors.black87,fontSize: 16,
-                                fontWeight: FontWeight.w400
-                            ),
-                            scrollPadding: EdgeInsets.only(bottom: 15),
-                          ),
-                          Positioned(
-                            left: 90,
-                            top: 12,
-                            child: Container(
-                              width: 1,
-                              height: 25,
-                              color: Colors.grey.shade900,
-                            ),
-                          )
-                        ],
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Full Name",
+                          hintStyle: GoogleFonts.robotoSlab(color: Colors.grey)
+                        ),
                       ),
                     ),
-                  ),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: "Profession",
+                            hintStyle: GoogleFonts.robotoSlab(color: Colors.grey),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          border: Border(top: BorderSide(
+                              color: Colors.grey[300]
+                          ))
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: "Location",
+                            hintStyle: GoogleFonts.robotoSlab(color: Colors.grey)
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
 
-                  MaterialButton(
-                    onPressed: (){
-                      Navigator.push(context,
-                          MaterialPageRoute(builder:(context) => Templates_Pages(),)
-                      );
-                    },
-                    color: Colors.blueAccent,
-                    height: 50,
-                    padding: EdgeInsets.only(left: 120,right: 120),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15)
+            Container(
+              padding: EdgeInsets.only(left: 15),
+              margin: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color(0xffeeeeee),
+                      blurRadius: 10,
+                      offset: Offset(0,4),
+                    )
+                  ],
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(color: Colors.black.withOpacity(0.13))
+              ),
+              child: Stack(
+                children: [
+                  InternationalPhoneNumberInput(
+                    onInputChanged: (value) {},
+                    formatInput: false,
+                    selectorConfig: SelectorConfig(
+                        selectorType: PhoneInputSelectorType.BOTTOM_SHEET
                     ),
-                    child: Text("Sign up",
-                        style: GoogleFonts.roboto(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.white,
+                    cursorColor: Colors.black,
+                    inputDecoration: InputDecoration(
+                        contentPadding: EdgeInsets.only(bottom: 15,left: 0),
+                        border: InputBorder.none,
+                        hintText: "Phone Number",
+                        hintStyle: TextStyle(
+                          color: Colors.grey.shade500,
+                          fontSize: 16,
+
                         )
                     ),
-                  ),
-                  SizedBox(height: 30,)
+                  )
                 ],
               ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(30),
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color.fromRGBO(196,135,198,.2),
+                        blurRadius: 10,
+                        offset: Offset(0,.1),
+                      )
+                    ]
+                ),
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          border: Border(bottom: BorderSide(
+                              color: Colors.grey[300]
+                          ))
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: "Education",
+                            hintStyle: GoogleFonts.robotoSlab(color: Colors.grey)
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: "Profile",
+                            hintStyle: GoogleFonts.robotoSlab(color: Colors.grey)
+                        ),
+                        maxLines: 5,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(30),
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color.fromRGBO(196,135,198,.2),
+                        blurRadius: 10,
+                        offset: Offset(0,.1),
+                      )
+                    ]
+                ),
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          border: Border(bottom: BorderSide(
+                              color: Colors.grey[300]
+                          ))
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: "Skills",
+                            hintStyle: GoogleFonts.robotoSlab(color: Colors.grey)
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: "Experience",
+                            hintStyle: GoogleFonts.robotoSlab(color: Colors.grey)
+                        ),
+                        maxLines: 5,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context,
+                    MaterialPageRoute(builder:(context) => Templates_Pages(
+                    )
+                    )
+                );
+              },
+              child: Container(
+                margin: EdgeInsets.all(30),
+                height: MediaQuery.of(context).size.height/15,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  gradient: LinearGradient(
+                    colors: [
+                      Color.fromRGBO(143,148,251,1),
+                      Color.fromRGBO(143,148,251,.6)
+                    ]
+                  )
+                ),
+                child: Center(
+                  child: Text("Next",
+                    style: GoogleFonts.robotoSlab(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25
+
+                    ),
+                  ),
+                ),
+              ),
             )
+
+
+
+
           ],
         ),
       ),

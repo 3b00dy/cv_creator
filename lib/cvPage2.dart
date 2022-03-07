@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:share/share.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({Key key}) : super(key: key);
@@ -11,7 +12,18 @@ class Page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        actions: [
+          Padding(padding: EdgeInsets.only(right: 15),
+            child: IconButton(
+              icon: Icon(Iconsax.share5,size: 30, color: Colors.white,),
+              onPressed: () {
+                Share.share("https://play.google.com/store/apps/details?id=com.instructivetech.testapp");
+              },
+            ),
+          ),
+        ],
+      ),
 
       body: SingleChildScrollView(
         child: Row(
